@@ -3,9 +3,7 @@ import datetime
 
 ano = int(input('Qual o seu ano de nascimento? '))
 print(f'Você nasceu em {ano}.')
-
 ano_hj = int(datetime.date.today().year)
-
 if ano_hj - ano < 18:
     print('Você ainda vai se alistar ao serviço militar')
 elif ano_hj - ano == 18:
