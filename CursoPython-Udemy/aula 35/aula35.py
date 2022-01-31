@@ -67,3 +67,10 @@ def fb(n):
 print(fb(3))
 print(fb(5))
 print(fb(45))
+
+from random import randint
+
+for i in range(100):
+    random_numbers = randint(0, 100)
+    print(fb(random_numbers))
+
