@@ -1,0 +1,19 @@
+
+<!DOCTYPE html> <!-- Esta é a marcação HTML5-->                  <!-- CóDIGO HTML DE MODELO BASE -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ the_title }}</title> <!-- Diretiva do Jinja2, que indica um valor será fornecido antes de apresentar (consi-
+    dere isso como um argumento para o modelo) -->
+    <link rel="stylesheet" href="static/hf.css" /> <!-- hf.css -> Esta folha de estilo define a aparência de todas as
+    páginas da web. -->
+</head>
+<body>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
+
+<!-- Estas diretivas do Jinja2
+indicam que um bloco HTML será substituído aqui antes de apresentar
+e será fornecido por qualquer página que herdar dele. -->
