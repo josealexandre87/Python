@@ -1,11 +1,15 @@
-from flask import Flask, render_template, request  #Esse é o nome da Classe: "Flask" com "F" maiúsculo.
+from flask import Flask, render_template, request, escape  #Esse é o nome da Classe: "Flask" com "F" maiúsculo.
 from vsearch import search4letters
 #Este é o nome do módulo "flask" com "f" minúsculo.
 app = Flask(__name__) #Cria uma instância de um objeto Flask e atribui à variável "app".
 
+
 def log_request(req: 'flask_request', res: str) -> None:
     with open('vsearch.log', 'a') as log:
-        print(req, res, file=log)
+        print(req.form, file=log)
+        print(req.remote_addr, file=log)
+        print(req.user_agent, file=log)
+        print(res, file=log)
 
 
 @app.route('/search4', methods=['POST'])
@@ -25,6 +29,14 @@ def do_search() -> 'html':
 @app.route('/entry')
 def entry_page() -> 'html':
     return render_template('entry.html', the_title='Welcome to search4letters on the web!')
+
+
+@app.route('/viewlog')
+def view_the_log() -> str:
+    with open('vsearch.log') as log:
+        contents = log.read()
+    return escape(contents)
+
 
 if __name__ == '__main__':
     app.run(debug=True) #pede ao aplicativo web para começar a execução.
