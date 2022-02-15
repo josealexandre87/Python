@@ -17,7 +17,7 @@ n1, n2, n3, *_, n4 = t4 #diz pra concatenação parar ali. e depois de ' *_' o n
 
 print(n1, n2, n3, n4)
 ##################################################
-tu1 = (1, 2, 3, 4, 5)
+tu1 = (1, 2, 3, 4, 5, 6)
 tu1 = list(tu1)
 tu1[1] = 3000
 tu1 = tuple(tu1)
