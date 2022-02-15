@@ -89,7 +89,8 @@ d1 = {
 
 d2 = {
     'a': 'b',
-    'c':'d'
+    'c':'d',
+    'e':'f'
 }
 
 d1.update(d2) #update juta os dicionários. o sinal de + não concatena aqui.
