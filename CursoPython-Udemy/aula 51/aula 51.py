@@ -20,9 +20,14 @@ cidades_estados = zip(
 # DESEMPACOTAMENTO DOS DADOS
 for indice, estados, cidades in cidades_estados:
     print(indice, estados, cidades)
+ #SAÍDA count():
+# 0 SP São Paulo
+# 1 MG Belo Horizonte
+# 2 BA Salvador
+
 # print(list(cidades_estados)) # CONVERTIDO EM UMA LISTA!
 
-# SAIDA:
+# SAIDA list ( sem o count() ):
 # ('São Paulo', 'SP')
 # ('Belo Horizonte', 'MG')
 # ('Salvador', 'BA')
