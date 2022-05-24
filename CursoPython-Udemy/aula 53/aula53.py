@@ -1,6 +1,6 @@
 """
 
-Count - Intertools   (Contadores Infinitos)
+Count - Intertools (Contadores Infinitos)
 """
 
 from itertools import count
